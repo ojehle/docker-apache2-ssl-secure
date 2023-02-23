@@ -1,3 +1,4 @@
+
 # apache2 - (marvambass/apache2-ssl-secure) (+ optional tls & php) on debian [x86 + arm]
 
 _maintained by MarvAmBass_
@@ -46,3 +47,7 @@ You should overwrite the _/etc/apache2/external/_ with a folder, containing your
     -v $EXT_DIR:/etc/apache2/external/ \
     marvambass/apache2-ssl-secure
 
+## build and push
+
+docker build -t murks/docker-apache2-ssl-secure:latest .
+docker push -t murks/docker-apache2-ssl-secure:latest
