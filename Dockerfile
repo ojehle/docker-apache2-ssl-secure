@@ -4,9 +4,9 @@ ENV LANG=C.UTF-8 DEBIAN_FRONTEND=noninteractive APACHE_RUN_USER=www-data APACHE_
 
 
 COPY apt/sources.list /etc/apt/sources.list
-RUN apt-get -q -y update && \
+RUN apt-get -y update && \
     apt-get --no-install-recommends -y install runit apache2 libapache2-mod-php php openssl php-xml && \
-    apt-get -q -y clean && \
+    apt-get -y clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     \
     rm -rf /var/www/html/*; rm -rf /etc/apache2/sites-enabled/* && \
